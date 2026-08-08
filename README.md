@@ -1,52 +1,56 @@
-# AI Resume Screening System
+# 🤖 AI Resume Screening System
 
 An AI-powered resume screening and candidate evaluation system that helps recruiters analyze resumes against job descriptions using Natural Language Processing, semantic similarity, skill matching, and ATS-based scoring.
 
-The system provides an interactive Streamlit dashboard where recruiters can upload resumes, enter a job description, analyze candidate suitability, and view screening analytics.
+The application provides an interactive Streamlit interface for uploading resumes, entering job descriptions, evaluating candidates, and viewing screening analytics.
 
 ---
 
-## Overview
+## 📌 Overview
 
 Recruiters often need to review a large number of resumes for a single position. Manually comparing resumes with job requirements can be time-consuming and inconsistent.
 
-This project automates key parts of the initial screening process by combining:
+The **AI Resume Screening System** automates the initial screening process by combining:
 
-- Resume text extraction
-- NLP-based preprocessing
-- Skill extraction
-- Semantic similarity
-- Skill matching
-- ATS score calculation
-- Candidate recommendations
-- Screening analytics
+- 📄 Resume text extraction
+- 🧹 NLP-based preprocessing
+- 🛠️ Skill extraction
+- 🧠 Semantic similarity
+- 🎯 Skill matching
+- 📊 ATS scoring
+- ⭐ Candidate recommendations
+- 📈 Screening analytics
 
-The goal is to provide a faster and more structured way to evaluate candidates while keeping the screening process transparent.
+The system is designed as a **recruitment decision-support tool** that helps recruiters quickly identify candidates whose resumes are most relevant to a given job description.
 
 ---
 
-## Key Features
+## ✨ Features
 
-###  Resume Screening
+### 📄 Resume Screening
 
 - Upload resumes in **PDF, DOCX, or TXT** format
 - Extract resume text automatically
 - Clean and preprocess resume content
-- Display original, cleaned, and NLP-processed text
-- Detect relevant technical skills
-- Compare resume skills with job requirements
+- View original resume text
+- View cleaned resume text
+- View NLP-processed resume text
+- Automatically detect technical skills
+- Display required job skills
+- Compare candidate skills against job requirements
 
-### NLP & Semantic Matching
+### 🧠 NLP & Machine Learning
 
 - Natural Language Processing using **spaCy**
-- Resume preprocessing and normalization
-- Skill extraction using predefined skill matching
-- Semantic representation using **BGE embeddings**
-- Cosine similarity between resume and job description
+- Resume text preprocessing
+- Automated skill extraction
+- Semantic embeddings using **BGE-small-en-v1.5**
+- Cosine similarity between resumes and job descriptions
+- Skill-based matching
 
-### ATS Scoring
+### 📊 ATS Scoring
 
-The system combines multiple screening signals into an overall ATS score:
+The system calculates an ATS score using multiple candidate evaluation signals:
 
 - Semantic Similarity
 - Skill Match
@@ -54,102 +58,179 @@ The system combines multiple screening signals into an overall ATS score:
 - Education Match
 - Resume Completeness
 
-The final score is used to generate a candidate recommendation.
+### 🎯 Candidate Recommendations
 
-### Candidate Recommendations
-
-Candidates are categorized into:
+Candidates are categorized based on their ATS score:
 
 | ATS Score | Recommendation |
 |-----------|----------------|
 | `60+` | ⭐ Strong Hire |
 | `50–59.99` | ✅ Hire |
-| `45–49.99` | ⚠️ Consider |
-| `<45` | ❌ Reject |
+| `40–49.99` | ⚠️ Consider |
+| `<40` | ❌ Reject |
 
-### Analytics Dashboard
+### 📈 Analytics Dashboard
 
-The analytics section provides insights into resumes analyzed during the current session, including:
+The analytics dashboard provides an overview of screening activity during the current session.
 
-- Number of resumes screened
+It includes:
+
+- Number of resumes scanned
 - Average ATS score
 - Average semantic similarity
 - Average skill match
 - Score trends
 - Recommendation distribution
-- Commonly detected skills
-- Screening history
+- Most commonly detected skills
+- Resume screening history
 
 ---
 
-## Machine Learning Pipeline
+# 🧠 Machine Learning Pipeline
 
 The system follows an end-to-end resume screening pipeline:
 
 ```text
-                 Resume
-                    │
-                    ▼
-          ┌──────────────────┐
-          │ Text Extraction  │
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ NLP Preprocessing│
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ Skill Extraction │
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ BGE Embeddings   │
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ Cosine Similarity│
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ Skill Matching   │
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │   ATS Scoring    │
-          └────────┬─────────┘
-                   │
-                   ▼
-          ┌──────────────────┐
-          │ Recommendation   │
-          └──────────────────┘
+                         Resume
+                           │
+                           ▼
+                 ┌──────────────────┐
+                 │ Text Extraction  │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ NLP Preprocessing│
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ Skill Extraction │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ BGE Embeddings   │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ Cosine Similarity│
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ Skill Matching   │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │   ATS Scoring    │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ Recommendation   │
+                 └──────────────────┘
+```
 
-## Tech Stack
-Programming & Application
-Python
-Streamlit
-Natural Language Processing
-spaCy
-Sentence Transformers
-Machine Learning
-BGE-small-en-v1.5
-Scikit-learn
-Cosine Similarity
-Data Processing
-Pandas
-NumPy
-Visualization
-Plotly
-Development
-Jupyter Notebook
-Git & GitHub
+---
 
-📂 Project Structure
+# 🔍 Screening Workflow
+
+A typical candidate screening process works as follows:
+
+```text
+1. Upload Resume
+        ↓
+2. Enter Job Description
+        ↓
+3. Extract Resume Text
+        ↓
+4. Clean Resume Text
+        ↓
+5. NLP Preprocessing
+        ↓
+6. Extract Resume Skills
+        ↓
+7. Generate BGE Embeddings
+        ↓
+8. Calculate Semantic Similarity
+        ↓
+9. Calculate Skill Match
+        ↓
+10. Calculate ATS Score
+        ↓
+11. Generate Recommendation
+        ↓
+12. Display Results & Analytics
+```
+
+---
+
+# 📊 ATS Score Calculation
+
+The ATS score combines multiple screening signals:
+
+```text
+ATS Score =
+
+40% × Semantic Similarity
++
+35% × Skill Match
++
+10% × Experience Match
++
+5% × Education Match
++
+10% × Resume Completeness
+```
+
+The resulting score is used to generate a candidate recommendation.
+
+---
+
+# 🛠️ Tech Stack
+
+### Programming
+
+- Python
+
+### Application Framework
+
+- Streamlit
+
+### Natural Language Processing
+
+- spaCy
+- Sentence Transformers
+
+### Machine Learning
+
+- BGE-small-en-v1.5
+- Scikit-learn
+- Cosine Similarity
+
+### Data Processing
+
+- Pandas
+- NumPy
+
+### Visualization
+
+- Plotly
+
+### Development Tools
+
+- Jupyter Notebook
+- Git
+- GitHub
+
+---
+
+# 📂 Project Structure
+
+```text
 FUTURE_ML_03/
 │
 ├── app.py
@@ -178,130 +259,215 @@ FUTURE_ML_03/
     ├── resume-screening.png
     ├── analytics.png
     └── about.png
+```
 
-Large datasets and generated model files are excluded from version control using .gitignore.
+---
 
-📸 Application Screenshots
-🏠 Dashboard
+# 📸 Application Screenshots
 
-The dashboard provides an overview of the AI-powered resume screening system, its capabilities, and the technologies used.
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/d673bcb2-e5db-4d81-9b70-54662f2c81a3" />
+## 🏠 Dashboard
 
-📄 Resume Screening
+The dashboard provides an overview of the AI Resume Screening System, its core capabilities, and the technologies used.
 
-Recruiters can upload a resume and provide a job description. The system processes the resume and presents detected skills, required job skills, similarity, skill match, ATS score, and recommendation.
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/7d78edee-07f5-4d86-8bda-efeed0f490e9" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/f83c254a-d2e5-499b-9fa5-a8db09efdff7" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/72cd87ce-9ea4-4f2b-8a56-29d9331e6b84" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/8e066562-6c41-4fb4-a4ed-6d60bd2501f5" />
+![Dashboard](screenshots/Dashboard.png)
 
+---
 
-📊 Analytics
+## 📄 Resume Screening
 
-The analytics dashboard provides an overview of screening activity and candidate evaluation trends.
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/90e17612-cc33-4b4e-bdd6-34211876e8ed" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/4ba29477-92ba-47c3-a783-e305823b8bb7" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/19adb4fd-9de3-4cfa-8c24-c76a19b781dc" />
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/0af4809c-05e8-4bae-9ac7-d068b0bf961e" />
+The Resume Screening module allows recruiters to upload a resume and provide a job description for analysis.
 
-ℹ️ About
+### Resume Processing
 
-The About section explains the technology stack and overall methodology behind the system.
-<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/fa3a87aa-42e1-4a0f-992f-7e7e48e3c906" />
+![Resume Screening](screenshots/rs-1.png)
 
+### ATS Results
 
-⚙️ How to Run Locally
-1. Clone the repository
+![ATS Results](screenshots/rs-2.png)
+
+### Score Breakdown
+
+![Score Breakdown](screenshots/rs-3.png)
+
+### Candidate Summary
+
+![Candidate Summary](screenshots/rs-4.png)
+
+### Skill Matching
+
+![Skill Matching](screenshots/rs-5.png)
+
+---
+
+## 📊 Analytics
+
+The Analytics dashboard provides insights into screening activity, candidate scores, recommendations, and detected skills.
+
+### Analytics Overview
+
+![Analytics Overview](screenshots/a1.png)
+
+### Score Trends
+
+![Score Trends](screenshots/a2.png)
+
+### Recommendation Distribution
+
+![Recommendation Distribution](screenshots/a3.png)
+
+### Screening History
+
+![Screening History](screenshots/a4.png)
+
+---
+
+## ℹ️ About
+
+The About section provides an overview of the system and the technologies used to build it.
+
+![About](screenshots/About.png)
+---
+
+# ⚙️ Installation & Setup
+
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/Dikshitha-Rasineni/FUTURE_ML_03.git
-2. Navigate to the project
+```
+
+## 2. Navigate to the Project
+
+```bash
 cd FUTURE_ML_03
-3. Create a virtual environment
-macOS / Linux
+```
+
+## 3. Create a Virtual Environment
+
+### macOS / Linux
+
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
-Windows
+```
+
+### Windows
+
+```bash
 python -m venv .venv
 .venv\Scripts\activate
-4. Install dependencies
+```
+
+## 4. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-5. Run the Streamlit application
+```
+
+## 5. Run the Application
+
+```bash
 streamlit run app.py
+```
 
-The application will open in your browser at the local Streamlit address.
+The application will open through the Streamlit local development server.
 
-🔍 Example Screening Workflow
+---
 
-A typical screening process looks like:
+# 🎯 Project Objective
 
-1. Upload Resume
-        ↓
-2. Enter Job Description
-        ↓
-3. Extract Resume Text
-        ↓
-4. Preprocess Resume
-        ↓
-5. Extract Skills
-        ↓
-6. Generate Semantic Embeddings
-        ↓
-7. Calculate Similarity
-        ↓
-8. Calculate Skill Match
-        ↓
-9. Calculate ATS Score
-        ↓
-10. Generate Recommendation
-📊 ATS Score Calculation
+The main objective of this project is to develop an intelligent resume screening system that can:
 
-The ATS score combines the major screening signals into a single score:
+- Reduce the time required for initial resume screening
+- Identify relevant candidate skills
+- Compare resumes with job requirements
+- Measure semantic similarity between resumes and job descriptions
+- Generate a structured ATS score
+- Provide candidate recommendations
+- Present screening insights through an interactive dashboard
 
-ATS Score =
-    40% Semantic Similarity
-  + 35% Skill Match
-  + 10% Experience Match
-  +  5% Education Match
-  + 10% Resume Completeness
+The system is intended to assist recruiters in the **initial candidate screening process** while keeping the final hiring decision with a human recruiter.
 
-This provides a structured scoring mechanism for comparing candidates against a particular job description.
+---
 
-🎯 Project Objective
+# 📈 Example Evaluation
 
-The primary objective of this project is to develop an intelligent resume screening system that can:
+The system can identify different levels of candidate-job compatibility.
 
-Reduce the time required for initial resume screening
-Identify relevant candidate skills
-Compare resumes with job requirements
-Provide semantic similarity between resumes and job descriptions
-Generate a consistent ATS score
-Assist recruiters in prioritizing candidates
+### Strong Match
 
-The system is intended as a recruitment decision-support tool, rather than a replacement for human decision-making.
+A candidate with most of the required technical skills and strong semantic similarity can receive a high ATS score and a:
 
-🔮 Future Improvements
+> ⭐ Strong Hire
+
+### Partial Match
+
+A candidate with some relevant skills but several missing requirements can receive a moderate ATS score and a:
+
+> ⚠️ Consider
+
+### Weak Match
+
+A candidate whose resume has limited overlap with the job requirements can receive a lower ATS score.
+
+### Poor Match
+
+A candidate with very little overlap with the required skills and job description can receive:
+
+> ❌ Reject
+
+This allows the system to distinguish between strong, partial, weak, and poor candidate matches.
+
+---
+
+# 🔮 Future Improvements
 
 Potential future enhancements include:
 
-Multi-resume batch screening
-Candidate ranking across multiple resumes
-More advanced experience extraction
-Improved education and experience matching
-Resume-to-job explainability
-Recruiter authentication
-Persistent candidate databases
-Exportable screening reports
-Bias and fairness monitoring
-Cloud deployment
-Integration with applicant tracking systems
-📌 Project Status
+- Multi-resume batch screening
+- Candidate ranking across multiple resumes
+- Improved experience extraction
+- Improved education matching
+- Resume-to-job explainability
+- Persistent candidate database
+- Exportable screening reports
+- Bias and fairness monitoring
+- Cloud deployment
+- Integration with existing Applicant Tracking Systems
+- Recruiter authentication
+- Role-based access control
 
-Current Status: Completed Prototype
+---
 
-The current system includes the core resume screening pipeline, Streamlit interface, ATS scoring, candidate recommendations, and analytics dashboard.
+# 📌 Project Status
 
-👩‍💻 Author
+**Status: Completed Prototype**
 
-Dikshitha Rasineni
+The current system includes:
 
-B.Tech — Computer Science & Engineering
+- ✅ Resume upload
+- ✅ Resume text extraction
+- ✅ NLP preprocessing
+- ✅ Skill extraction
+- ✅ Semantic similarity
+- ✅ Skill matching
+- ✅ ATS scoring
+- ✅ Candidate recommendations
+- ✅ Streamlit dashboard
+- ✅ Analytics dashboard
+- ✅ Screening history
+
+---
+
+# 👩‍💻 Author
+
+**Dikshitha Rasineni**
+
+B.Tech — Computer Science & Engineering  
 Specialization in Artificial Intelligence & Machine Learning
+
+---
+
+# 📄 License
+
+This project was developed for educational and internship purposes.

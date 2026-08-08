@@ -12,14 +12,14 @@ Recruiters often need to review a large number of resumes for a single position.
 
 The **AI Resume Screening System** automates the initial screening process by combining:
 
-- 📄 Resume text extraction
-- 🧹 NLP-based preprocessing
-- 🛠️ Skill extraction
-- 🧠 Semantic similarity
-- 🎯 Skill matching
-- 📊 ATS scoring
-- ⭐ Candidate recommendations
-- 📈 Screening analytics
+- Resume text extraction
+-  NLP-based preprocessing
+-  Skill extraction
+-  Semantic similarity
+-  Skill matching
+-  ATS scoring
+-  Candidate recommendations
+-  Screening analytics
 
 The system is designed as a **recruitment decision-support tool** that helps recruiters quickly identify candidates whose resumes are most relevant to a given job description.
 
@@ -27,7 +27,7 @@ The system is designed as a **recruitment decision-support tool** that helps rec
 
 ## Features
 
-### 📄 Resume Screening
+###  Resume Screening
 
 - Upload resumes in **PDF, DOCX, or TXT** format
 - Extract resume text automatically
@@ -39,7 +39,7 @@ The system is designed as a **recruitment decision-support tool** that helps rec
 - Display required job skills
 - Compare candidate skills against job requirements
 
-### 🧠 NLP & Machine Learning
+###  NLP & Machine Learning
 
 - Natural Language Processing using **spaCy**
 - Resume text preprocessing
@@ -48,7 +48,7 @@ The system is designed as a **recruitment decision-support tool** that helps rec
 - Cosine similarity between resumes and job descriptions
 - Skill-based matching
 
-### 📊 ATS Scoring
+###  ATS Scoring
 
 The system calculates an ATS score using multiple candidate evaluation signals:
 
@@ -58,18 +58,18 @@ The system calculates an ATS score using multiple candidate evaluation signals:
 - Education Match
 - Resume Completeness
 
-### 🎯 Candidate Recommendations
+###  Candidate Recommendations
 
 Candidates are categorized based on their ATS score:
 
 | ATS Score | Recommendation |
 |-----------|----------------|
-| `60+` | ⭐ Strong Hire |
-| `50–59.99` | ✅ Hire |
-| `40–49.99` | ⚠️ Consider |
-| `<40` | ❌ Reject |
+| `60+` |  Strong Hire |
+| `50–59.99` |  Hire |
+| `40–49.99` |  Consider |
+| `<40` |  Reject |
 
-### 📈 Analytics Dashboard
+###  Analytics Dashboard
 
 The analytics dashboard provides an overview of screening activity during the current session.
 
@@ -190,7 +190,7 @@ The resulting score is used to generate a candidate recommendation.
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 ### Programming
 
@@ -228,7 +228,7 @@ The resulting score is used to generate a candidate recommendation.
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 FUTURE_ML_03/
@@ -265,7 +265,7 @@ FUTURE_ML_03/
 
 # Application Screenshots
 
-## 🏠 Dashboard
+## Dashboard
 
 The dashboard provides an overview of the AI Resume Screening System, its core capabilities, and the technologies used.
 
@@ -273,7 +273,7 @@ The dashboard provides an overview of the AI Resume Screening System, its core c
 
 ---
 
-## 📄 Resume Screening
+## Resume Screening
 
 The Resume Screening module allows recruiters to upload a resume and provide a job description for analysis.
 
@@ -299,7 +299,7 @@ The Resume Screening module allows recruiters to upload a resume and provide a j
 
 ---
 
-## 📊 Analytics
+## Analytics
 
 The Analytics dashboard provides insights into screening activity, candidate scores, recommendations, and detected skills.
 
@@ -445,17 +445,17 @@ Potential future enhancements include:
 
 The current system includes:
 
-- ✅ Resume upload
-- ✅ Resume text extraction
-- ✅ NLP preprocessing
-- ✅ Skill extraction
-- ✅ Semantic similarity
-- ✅ Skill matching
-- ✅ ATS scoring
-- ✅ Candidate recommendations
-- ✅ Streamlit dashboard
-- ✅ Analytics dashboard
-- ✅ Screening history
+- Resume upload
+- Resume text extraction
+- NLP preprocessing
+- Skill extraction
+- Semantic similarity
+- Skill matching
+- ATS scoring
+- Candidate recommendations
+- Streamlit dashboard
+- Analytics dashboard
+- Screening history
 
 ---
 

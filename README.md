@@ -269,7 +269,7 @@ FUTURE_ML_03/
 
 The dashboard provides an overview of the AI Resume Screening System, its core capabilities, and the technologies used.
 
-![Dashboard](screenshots/Dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
@@ -325,7 +325,7 @@ The Analytics dashboard provides insights into screening activity, candidate sco
 
 The About section provides an overview of the system and the technologies used to build it.
 
-![About](screenshots/About.png)
+![About](screenshots/about.png)
 ---
 
 # ⚙️ Installation & Setup

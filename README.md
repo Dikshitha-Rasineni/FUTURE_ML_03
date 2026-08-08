@@ -1,4 +1,4 @@
-# 🤖 AI Resume Screening System
+# AI Resume Screening System
 
 An AI-powered resume screening and candidate evaluation system that helps recruiters analyze resumes against job descriptions using Natural Language Processing, semantic similarity, skill matching, and ATS-based scoring.
 
@@ -6,7 +6,7 @@ The application provides an interactive Streamlit interface for uploading resume
 
 ---
 
-## 📌 Overview
+## Overview
 
 Recruiters often need to review a large number of resumes for a single position. Manually comparing resumes with job requirements can be time-consuming and inconsistent.
 
@@ -25,7 +25,7 @@ The system is designed as a **recruitment decision-support tool** that helps rec
 
 ---
 
-## ✨ Features
+## Features
 
 ### 📄 Resume Screening
 
@@ -86,7 +86,7 @@ It includes:
 
 ---
 
-# 🧠 Machine Learning Pipeline
+# Machine Learning Pipeline
 
 The system follows an end-to-end resume screening pipeline:
 
@@ -168,7 +168,7 @@ A typical candidate screening process works as follows:
 
 ---
 
-# 📊 ATS Score Calculation
+#  ATS Score Calculation
 
 The ATS score combines multiple screening signals:
 
@@ -263,7 +263,7 @@ FUTURE_ML_03/
 
 ---
 
-# 📸 Application Screenshots
+# Application Screenshots
 
 ## 🏠 Dashboard
 
@@ -321,14 +321,14 @@ The Analytics dashboard provides insights into screening activity, candidate sco
 
 ---
 
-## ℹ️ About
+##  About
 
 The About section provides an overview of the system and the technologies used to build it.
 
 ![About](screenshots/about.png)
 ---
 
-# ⚙️ Installation & Setup
+# Installation & Setup
 
 ## 1. Clone the Repository
 
@@ -374,7 +374,7 @@ The application will open through the Streamlit local development server.
 
 ---
 
-# 🎯 Project Objective
+# Project Objective
 
 The main objective of this project is to develop an intelligent resume screening system that can:
 
@@ -390,7 +390,7 @@ The system is intended to assist recruiters in the **initial candidate screening
 
 ---
 
-# 📈 Example Evaluation
+# Example Evaluation
 
 The system can identify different levels of candidate-job compatibility.
 
@@ -420,7 +420,7 @@ This allows the system to distinguish between strong, partial, weak, and poor ca
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 Potential future enhancements include:
 
@@ -439,7 +439,7 @@ Potential future enhancements include:
 
 ---
 
-# 📌 Project Status
+# Project Status
 
 **Status: Completed Prototype**
 
@@ -459,7 +459,7 @@ The current system includes:
 
 ---
 
-# 👩‍💻 Author
+# Author
 
 **Dikshitha Rasineni**
 
@@ -468,6 +468,6 @@ Specialization in Artificial Intelligence & Machine Learning
 
 ---
 
-# 📄 License
+# License
 
 This project was developed for educational and internship purposes.
